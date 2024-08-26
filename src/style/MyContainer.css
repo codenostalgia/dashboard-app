@@ -1,0 +1,22 @@
+.mycontainer {
+  height: 92%;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+
+  /* overflow-y: auto;
+  scrollbar-width: none; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-heading{
+  display: inline;
+  float: left;
+}
+
+.add-widget-button {
+  display: inline;
+float: right;
+}

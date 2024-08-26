@@ -1,0 +1,28 @@
+/* .category {
+  min-width: 98%;
+  max-width: 98%;
+
+  height: 40%;
+
+  margin: 1%;
+  border: 2px solid blue;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+} */
+
+.category-title{
+}
+
+.category-card {
+  background-color: #f0f0f5 !important ;
+  border-radius: 20px !important;
+}
+
+.category-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

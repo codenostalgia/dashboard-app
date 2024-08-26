@@ -1,0 +1,23 @@
+.file-container{
+    margin: 5%;
+    /* border: 2px solid red; */
+    height: 50vh;
+
+    display: block;
+}
+
+.file-div{
+    height: 100%;
+    width: 100%;
+
+    background-color: black;
+    border: 1px solid #161925;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

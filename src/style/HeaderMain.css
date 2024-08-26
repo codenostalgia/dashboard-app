@@ -1,0 +1,33 @@
+.myheader {
+  height: 8%;
+  width: 100%;
+
+  background-color: black;
+  color: white;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.main-heading {
+  float: left;
+}
+
+
+.searchbar {
+  margin-top: 0.5%;
+  margin-left: 40%;
+  padding: 5px;
+  width: 20%;
+  height: 70%;
+  float: left;
+  display: inline !important;
+}
+
+.search-button {
+  margin-top: 0.5%;
+  height: 70%;
+  float: left;
+  display: inline !important;
+}

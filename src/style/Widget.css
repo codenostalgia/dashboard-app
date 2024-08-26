@@ -1,0 +1,10 @@
+.widget {
+  aspect-ratio: 2/1;
+  width:100%;
+  background-color: #ffffff !important ;
+  border-radius: 20px;
+  /* height:100%; */  
+  padding: 10px;
+  margin: 1%;
+}
+

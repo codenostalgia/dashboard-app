@@ -5,10 +5,6 @@ import { Row, Col, Card, CardTitle, CardText, Button } from "reactstrap";
 import EmptyWidget from "./EmptyWidget";
 
 const Category = (props) => {
-  const [state, setState] = React.useState({
-    mylist: ["1", "2", "3", "4", "5"],
-  });
-
   return (
     <Card body className="category-card border-light">
       <Row sm="12" className="category-row">
@@ -23,7 +19,7 @@ const Category = (props) => {
           }
         })}
         <Col sm="4" className="wid">
-          <EmptyWidget />
+          <EmptyWidget categoryName={props.category.name} />
         </Col>
       </Row>
     </Card>

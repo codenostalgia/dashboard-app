@@ -4,6 +4,8 @@ import { Card, Col } from "reactstrap";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { addData } from "../redux_config/store";
+import { connect } from "react-redux";
 
 const AddWidgetSidebar = (props) => {
   function cancelHandler(e) {
@@ -15,7 +17,53 @@ const AddWidgetSidebar = (props) => {
     const sidebar = document.getElementById("widget-sidebar");
     sidebar.style.display = "none";
 
-    
+    let checkbokContainer = document.getElementById("select-active-widgets");
+    let inputElements = checkbokContainer.getElementsByTagName("input");
+
+    if (inputElements.length) {
+      let categoryName = inputElements[0].id.split("-")[0];
+      console.log("categoryName: ", categoryName);
+
+      let categories = props.categories;
+      console.log("categories: ", categories);
+
+      let category = categories.filter((cat) => {
+        return cat.name.toLowerCase() === categoryName.toLowerCase();
+      })[0];
+
+      let widgets = category["widgets"];
+
+      let updatedCategory = {
+        name: categoryName,
+        widgets: [],
+      };
+
+      for (let item of inputElements) {
+        let widgetName = item.id.split("-")[1];
+        console.log("widgetName: ", widgetName);
+
+        for (let i = 0; i < widgets.length; i++) {
+          let widget = widgets[i];
+          if (widgetName.toLowerCase() === widget.name.toLowerCase()) {
+            widget.active = item.checked;
+            updatedCategory.widgets.push(widget);
+            break;
+          }
+        }
+      }
+
+      console.log("updatedCategory: ", updatedCategory);
+
+      categories = categories.filter((cat) => {
+        return cat.name.toLowerCase() !== categoryName.toLowerCase();
+      });
+
+      categories.push(updatedCategory);
+
+      console.log("Categories: ", categories);
+
+      props.addJsonData(categories);
+    }
   }
 
   return (
@@ -71,4 +119,16 @@ const AddWidgetSidebar = (props) => {
   );
 };
 
-export default AddWidgetSidebar;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    categories: state.category.categories,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addJsonData: (data) => dispatch(addData(data)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddWidgetSidebar);

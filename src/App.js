@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { store } from "./redux_config/store";
 import { Route, Routes } from "react-router-dom";
 import ListOfWidgets from "./components/ListOfWidgets";
+import AddWidget from "./components/AddWidget";
 
 function App() {
   return (

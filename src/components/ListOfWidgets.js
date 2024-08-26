@@ -12,7 +12,7 @@ const ListOfWidgets = (props) => {
     ? props.categories.filter((cat) => {
         return cat.name.toLowerCase() === categoryName.toLowerCase();
       })
-    : [];da
+    : [];
 
   console.log("category: ", category);
 
@@ -25,14 +25,18 @@ const ListOfWidgets = (props) => {
             return (
               <div className="form-check">
                 <input
+                  key={Math.random()}
                   className="form-check-input"
                   type="checkbox"
                   value={widget.name}
-                  id={widget.name}
+                  id={`${categoryName}-${widget.name}`}
                   defaultChecked={widget.active}
                 ></input>
-                <label className="form-check-label" for={widget.name}>
-                  {widget.name} - Acive: {widget.active.toString()}
+                <label
+                  className="form-check-label"
+                  for={`${categoryName}-${widget.name}`}
+                >
+                  {widget.name} 
                 </label>
               </div>
             );

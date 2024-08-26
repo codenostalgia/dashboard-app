@@ -1,0 +1,37 @@
+.modal-div {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-popup {
+  width: 30% !important;
+  height: 50% !important;
+}
+
+.ui.modal,
+.ui.active.modal {
+  margin: 0 auto !important;
+  top: auto !important;
+  left: auto !important;
+  transform-origin: center !important;
+  transition: all ease 0.5s;
+}
+
+.action {
+  background-color: white !important;
+}
+
+.confirm-btn {
+  background-color: #14147d !important;
+  color: white !important;
+}
+
+.cancel-btn {
+  background-color: white !important;
+  color: #14147d !important;
+  border: 2px solid #14147d !important;
+}

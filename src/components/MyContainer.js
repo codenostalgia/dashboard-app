@@ -11,12 +11,10 @@ const MyContainer = (props) => {
   //   console.log(props.categories);
   // }, []);
 
-  
   function addWidgetHandler(e) {
     const sidebar = document.getElementById("widget-sidebar");
     sidebar.style.display = "block";
   }
-
 
   return (
     <div className="mycontainer">
@@ -34,7 +32,7 @@ const MyContainer = (props) => {
         {props.categories.map((category) => {
           return <Category category={category} />;
         })}
-        <AddWidgetSidebar outlet={<Outlet/>} />
+        <AddWidgetSidebar outlet={<Outlet />} />
       </div>
     </div>
   );
@@ -42,7 +40,9 @@ const MyContainer = (props) => {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    categories: state.category.categories,
+    categories: state.category.categories.sort((a, b) =>
+      a.name.localeCompare(b.name)
+    ),
   };
 };
 

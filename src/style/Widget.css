@@ -1,10 +1,24 @@
 .widget {
   aspect-ratio: 2/1;
-  width:100%;
+  width: 100%;
   background-color: #ffffff !important ;
   border-radius: 20px;
-  /* height:100%; */  
+  /* height:100%; */
   padding: 10px;
   margin: 1%;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+    margin: 1%;
+}
+.erase-widget {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.4)  ;
+  border: none;
+
+}

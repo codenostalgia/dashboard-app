@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import addData from "./category/categoryAction";
+import filterData from "./filteredCategory/filterAction";
 
 import rootreducer from "./rootreducer";
 import { thunk } from "redux-thunk";
@@ -21,4 +22,4 @@ console.log("INITIAL STATE: ", store.getState());
 //   console.log("updated State: ", store.getState());
 // });
 
-export { store,addData,  dispatch };
+export { store,addData, filterData, dispatch };

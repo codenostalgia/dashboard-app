@@ -13,8 +13,11 @@ const HeaderMain = (props) => {
     let searchBar = document.getElementById("search-widget");
     let searchWidget = searchBar.value;
 
-    if (searchWidget === '') {
+    if (searchWidget == '') {
+      console.log("its empty");
+      
       props.filterCategories(null)
+      return;
     }
 
     console.log("origional data before: ", props.categories);

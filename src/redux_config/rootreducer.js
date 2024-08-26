@@ -1,5 +1,6 @@
 import { categoriesReducer } from "./category/categoryReducer";
 import { combineReducers } from "redux";
+import { filteredCategoriesReducer } from "./filteredCategory/filterReducer";
 
 // for every reducer, a node is created under state,
 // with the name given by "key"
@@ -7,6 +8,7 @@ import { combineReducers } from "redux";
 // state.cake.numberOfCakes
 const combinedReducerObject = {
   category: categoriesReducer,
+  filter: filteredCategoriesReducer,
 };
 
 const rootreducer = combineReducers(combinedReducerObject);

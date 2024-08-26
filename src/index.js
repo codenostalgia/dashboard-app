@@ -6,12 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import { BrowserRouter } from "react-router-dom";
+import Error from "./components/Error";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <ErrorBoundary fallback={<Error />}>
     <BrowserRouter>
-      <App />
+      <App />{" "}
     </BrowserRouter>
+  </ErrorBoundary>
 );
 
 // If you want to start measuring performance in your app, pass a function

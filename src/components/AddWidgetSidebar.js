@@ -8,6 +8,21 @@ import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
 
 const AddWidgetSidebar = (props) => {
+  React.useEffect(() => {
+    let navbar = document
+      .getElementById("navbar-nav")
+      .getElementsByTagName("a");
+
+    if (navbar) {
+      if (navbar.length) {
+        for (let linkitem of navbar) {
+          linkitem.click();
+          break;
+        }
+      }
+    }
+  }, []);
+
   function cancelHandler(e) {
     const sidebar = document.getElementById("widget-sidebar");
     sidebar.style.display = "none";
@@ -81,21 +96,13 @@ const AddWidgetSidebar = (props) => {
       <div className="sidebar-content">
         <nav className="navbar navbar-expand-lg navbar-light ">
           <ul className="navbar-nav" id="navbar-nav">
-            <NavLink className="nav-link" to="cspm">
-              CSPM
-            </NavLink>
-
-            <NavLink className="nav-link" to="cwpp">
-              CWPP
-            </NavLink>
-
-            <NavLink className="nav-link" to="image">
-              Image
-            </NavLink>
-
-            <NavLink className="nav-link" to="ticket">
-              Ticket
-            </NavLink>
+            {props.categories.map((cat) => {
+              return (
+                <NavLink className="nav-link" to={cat.name} id={cat.name}>
+                  {cat.name}
+                </NavLink>
+              );
+            })}
           </ul>
         </nav>
       </div>

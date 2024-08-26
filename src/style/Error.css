@@ -1,0 +1,11 @@
+.home-link:hover,
+.home-link:focus,
+.home-link:active {
+  text-decoration: none !important;
+  border: none;
+  color: white !important;
+}
+
+.home-button {
+  color: white !important;
+}

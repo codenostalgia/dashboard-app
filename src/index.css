@@ -19,3 +19,8 @@ body{
   width: 100%;
   
 }
+
+iframe
+{
+    display: none;
+}

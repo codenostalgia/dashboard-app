@@ -2,6 +2,7 @@ import * as React from "react";
 import { useParams } from "react-router";
 import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
+import "../style/ListOfWidgets.css"
 
 const ListOfWidgets = (props) => {
   const { categoryName } = useParams();

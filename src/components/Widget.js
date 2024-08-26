@@ -7,29 +7,32 @@ import { addData } from "../redux_config/store";
 const Widget = (props) => {
   function eraseHandler(e) {
     let updatedCategories = props.categories.map((cat) => {
-      cat.widgets = cat.widgets.map(wid => {
+      cat.widgets = cat.widgets.map((wid) => {
         if (wid.name.toLowerCase() === props.widget.name.toLowerCase()) {
           wid.active = false;
           return wid;
         }
         return wid;
-      })
+      });
       return cat;
-    })
+    });
 
     props.addJsonData(updatedCategories);
   }
 
   return (
     <div className="widget">
-      <div className="left">
-        <h3 className="widget-title">{props.widget.name}</h3>
+      <div>
+        <div className="left">
+          <h3 className="widget-title">{props.widget.name}</h3>
+        </div>
+        <div className="right">
+          <button className="erase-widget" onClick={eraseHandler}>
+            X
+          </button>
+        </div>
       </div>
-      <div className="right">
-        <button className="erase-widget" onClick={eraseHandler}>
-          X
-        </button>
-      </div>
+      <div className="widget-body">{props.widget.data}</div>
     </div>
   );
 };

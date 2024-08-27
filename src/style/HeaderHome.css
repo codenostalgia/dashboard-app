@@ -1,0 +1,19 @@
+.myheader {
+  height: 8vh;
+  width: 100vw;
+
+  background-color: white;
+  border-bottom-left-radius: 0.5vmin;
+  border-bottom-right-radius: 0.5vmin;
+
+  align-content: center;
+}
+
+
+.main-heading {
+  margin-left: 2%;
+  font-size: 2vmin;
+  align-content: center;
+}
+
+

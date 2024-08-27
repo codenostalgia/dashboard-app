@@ -38,7 +38,7 @@ const EmptyWidget = (props) => {
 
     let categories = props.categories.map((cat) => {
       if (cat.name.toLowerCase() === props.categoryName.toLowerCase()) {
-        cat.widgets.push(widget)
+        cat.widgets.push(widget);
         return cat;
       }
       return cat;
@@ -57,37 +57,38 @@ const EmptyWidget = (props) => {
           onOpen={() => setOpen(true)}
           open={open}
           trigger={<Button className="add-widget-btn">+ Add Widget</Button>}
-          className="modal-popup"
           id="mymodal"
         >
-          <ModalHeader>Add a Widget</ModalHeader>
+          <div className="modal-popup">
+            <div className="add-widget-header">Add New Widget</div>
 
-          <ModalContent>
-            <form className="ui form">
-              <div className="field">
-                <label>Name:</label>
-                <input
-                  type="text"
-                  name="first-name"
-                  placeholder="Wdget Name...."
-                  id="wid-name"
-                ></input>
-              </div>
+            <div className="body">
+              <form className="ui form">
+                <div className="field">
+                  <label>Widget Name:</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    placeholder="Wdget Name...."
+                    id="wid-name"
+                  ></input>
+                </div>
 
-              <div className="field">
-                <label>Data:</label>
-                <textarea rows="2" id="wid-data"></textarea>
-              </div>
-            </form>
-          </ModalContent>
-          <ModalActions className="action">
-            <Button onClick={cancelHandler} className="cancel-btn">
-              Cancel
-            </Button>
-            <Button onClick={confirmHandler} className="confirm-btn">
-              Add
-            </Button>
-          </ModalActions>
+                <div className="field">
+                  <label>Data:</label>
+                  <textarea rows="2" id="wid-data"></textarea>
+                </div>
+              </form>
+            </div>
+            <div className="action">
+              <Button onClick={confirmHandler} className="confirm-btn">
+                Add
+              </Button>
+              <Button onClick={cancelHandler} className="cancel-btn">
+                Cancel
+              </Button>
+            </div>
+          </div>
         </Modal>
       </div>
     </div>

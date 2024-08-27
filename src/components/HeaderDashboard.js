@@ -1,12 +1,12 @@
 import * as React from "react";
-import "../style/HeaderMain.css";
+import "../style/HeaderDashboard.css";
 import { MenuItem, Menu, Segment } from "semantic-ui-react";
 import { Button } from "reactstrap";
 import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
 import filterData from "../redux_config/filteredCategory/filterAction";
 
-const HeaderMain = (props) => {
+const HeaderDashboard = (props) => {
   const activeItem = "home";
 
   function searchChangeHandler(e) {
@@ -42,7 +42,13 @@ const HeaderMain = (props) => {
   return (
     <div className="myheader">
       <div className="path">
-       Home &gt; Dashboard
+        <a href="/" className="header-links">
+          Home
+        </a>{" "}
+        &gt;{" "}
+        <a href="#" className="header-links">
+          Dashboard
+        </a>
       </div>
       <div className="features">
         <input
@@ -73,4 +79,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderMain);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderDashboard);

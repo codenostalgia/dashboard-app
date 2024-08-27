@@ -10,14 +10,12 @@ import EmptyWidget from "./EmptyWidget";
 import { Card, Row } from "reactstrap";
 
 const MyContainer = (props) => {
-
   function addWidgetHandler(e) {
     const sidebar = document.getElementById("widget-sidebar");
     sidebar.style.display = "block";
 
     const body = document.getElementsByTagName("body")[0];
     body.style.overflowY = "hidden";
-
   }
 
   return (
@@ -52,13 +50,11 @@ const MyContainer = (props) => {
           !props.filteredCategories
             .map((cat) => cat.widgets.length)
             .reduce((total, x) => total + x) ? (
-            <Card body className="category-card border-light">
-              <Row sm="12" className="category-row no-result">
-                <Col sm="4" className="wid">
-                  <h1>NO RESULTS FOUND!!</h1>
-                </Col>
-              </Row>
-            </Card>
+            <div body className="no-result">
+              <div className="no-results">
+                <strong className="text">NO RESULTS FOUND!!</strong>
+              </div>
+            </div>
           ) : null
         ) : null}
         <AddWidgetSidebar outlet={<Outlet />} />

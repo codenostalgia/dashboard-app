@@ -50,11 +50,32 @@
 
 .no-result {
   height: 30vh !important;
-  width: 100vw !important;
+  width: 80vw !important;
   color: red !important;
+/* 
+  position: fixed; */
 
-  display: flex !important;
-  justify-content: center !important;
-  align-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
+
+  background-color: #fafafa;
+  box-shadow: 0.4vmin 0.4vmin  0.2vmin #a1a1a1;
+
+  border-radius: 8vmin 2vmin 8vmin 2vmin;
+
+  border: 0.1vmin solid #a1a1a1;
+}
+
+.no-results {
+  width: 40%;
+  height: 60%;
+  align-content: center;
+
+  font-size: 5vmin !important;
+}
+
+.text{
+  font-family:Verdana, Geneva, Tahoma, sans-serif!important;
+
 }

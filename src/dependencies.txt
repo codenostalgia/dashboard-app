@@ -6,4 +6,5 @@ npm install reactstrap react react-dom
 npm install react-router-dom@6
 npm install redux
 npm install react-redux  
-redux-thunk
+npm install redux-thunk
+npm install react-toastify

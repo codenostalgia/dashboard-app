@@ -5,13 +5,17 @@ import addData from "../redux_config/category/categoryAction";
 import { connect } from "react-redux";
 import { dispatch } from "../redux_config/store";
 import { useNavigate } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 
 const AddJsonPage = (props) => {
   const navigate = useNavigate();
 
+  // const notify = () => toast("Button Pressed!");
+
   function buttonHandler(e) {
     e.preventDefault();
-    const fileInput = document.getElementById("fileinput");
+    // notify();
+    const fileInput = document.getElementById("json-input-file");
 
     console.log(fileInput.files);
 
@@ -33,26 +37,33 @@ const AddJsonPage = (props) => {
   }
 
   return (
-    <Container className="file-container" textAlign="justified">
-      <h1>
-        <b>UPLOAD JSON:</b>
-      </h1>
-      <Divider />
-      <h5 id="hidden"></h5>
+    <div className="file-container" textAlign="justified">
+      <div className="upload-json">UPLOAD JSON FILE:</div>
+      <Divider/>
 
-      <div class="file-div">
-        <input
-          type="file"
-          class="inputfile bg-secondary"
-          id="fileinput"
-          accept=".json"
-        ></input>
-
-        <button type="button" class="btn btn-light" onClick={buttonHandler}>
-          UPLOAD
-        </button>
+      <div class="main">
+        {/* <div class="file-div">
+          <input class="" type="file" id="fileinput" accept=".json"></input>
+        </div> */}
+        <div class="file-div">
+          <label for="json-input-file" class="custom-file-upload">
+            &lt; Choose File &gt;
+          </label>
+          <input id="json-input-file" type="file" accept=".json" />
+        </div>
+        <br />
+        <div className="button-div">
+          <button
+            type="button"
+            class="btn btn-light upload-btn"
+            onClick={buttonHandler}
+          >
+            UPLOAD
+          </button>
+        </div>
       </div>
-    </Container>
+      <ToastContainer />
+    </div>
   );
 };
 

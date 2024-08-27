@@ -1,11 +1,6 @@
 import React from "react";
 import { Button } from "reactstrap";
-import {
-  Modal,
-  ModalActions,
-  ModalContent,
-  ModalHeader,
-} from "semantic-ui-react";
+import { Modal, ModalActions, ModalContent } from "semantic-ui-react";
 
 import "../style/AddWidget.css";
 
@@ -22,7 +17,7 @@ function AddWidget() {
         className="modal-popup"
         id="mymodal"
       >
-        <div className="heading">Add a Widget</div>
+        <div className="heading">Add a Widget </div>
 
         <ModalContent>
           <form className="ui form">

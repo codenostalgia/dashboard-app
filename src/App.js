@@ -3,7 +3,7 @@ import AddJsonPage from "./components/AddJsonPage";
 import HeaderHome from "./components/HeaderHome";
 import MyContainer from "./components/MyContainer";
 import Category from "./components/Category";
-import HeaderMain from "./components/HeaderMain";
+import HeaderDashboard from "./components/HeaderDashboard";
 import AddWidgetSidebar from "./components/AddWidgetSidebar";
 import { Provider } from "react-redux";
 import { store } from "./redux_config/store";
@@ -27,7 +27,7 @@ function App() {
             path="dashboard"
             element={
               <>
-                <HeaderMain />
+                <HeaderDashboard />
                 <MyContainer />
               </>
             }

@@ -21,6 +21,12 @@ const AddWidgetSidebar = (props) => {
         }
       }
     }
+
+    document
+      .getElementById("widget-block-region")
+      .addEventListener("click", () => {
+        cancelHandler();
+      });
   }, []);
 
   function cancelHandler(e) {
@@ -43,10 +49,7 @@ const AddWidgetSidebar = (props) => {
 
     if (inputElements.length) {
       let categoryName = inputElements[0].id.split("-")[0];
-      console.log("categoryName: ", categoryName);
-
       let categories = props.categories;
-      console.log("categories: ", categories);
 
       let category = categories.filter((cat) => {
         return cat.name.toLowerCase() === categoryName.toLowerCase();
@@ -61,7 +64,6 @@ const AddWidgetSidebar = (props) => {
 
       for (let item of inputElements) {
         let widgetName = item.id.split("-")[1];
-        console.log("widgetName: ", widgetName);
 
         for (let i = 0; i < widgets.length; i++) {
           let widget = widgets[i];
@@ -73,15 +75,11 @@ const AddWidgetSidebar = (props) => {
         }
       }
 
-      console.log("updatedCategory: ", updatedCategory);
-
       categories = categories.filter((cat) => {
         return cat.name.toLowerCase() !== categoryName.toLowerCase();
       });
 
       categories.push(updatedCategory);
-
-      console.log("Categories: ", categories);
 
       props.addJsonData(categories);
     }
@@ -89,7 +87,7 @@ const AddWidgetSidebar = (props) => {
 
   return (
     <div id="widget-sidebar">
-      <div className="widget-block-region"></div>
+      <div className="widget-block-region" id="widget-block-region"></div>
       <div className="widget-sidebar">
         <div className="sidebar-header">
           <div className="title">Add Widget</div>
@@ -112,7 +110,12 @@ const AddWidgetSidebar = (props) => {
             <ul className="navbar-nav" id="navbar-nav">
               {props.categories.map((cat) => {
                 return (
-                  <NavLink className="nav-link" to={cat.name} id={cat.name}>
+                  <NavLink
+                    className="nav-link"
+                    to={cat.name}
+                    id={cat.name}
+                    key={cat.name}
+                  >
                     {cat.name}
                   </NavLink>
                 );

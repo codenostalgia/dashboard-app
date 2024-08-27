@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ErrorBoundary fallback={<Error />}>
     <BrowserRouter>
-      <App />{" "}
+      <App />
     </BrowserRouter>
   </ErrorBoundary>
 );

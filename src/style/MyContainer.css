@@ -51,16 +51,18 @@
 .no-result {
   height: 30vh !important;
   width: 80vw !important;
-  color: red !important;
-/* 
-  position: fixed; */
+  color: black !important;
+
+  position: fixed;
+  top: 20vh;
+  left: 10vw;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: #fafafa;
-  box-shadow: 0.4vmin 0.4vmin  0.2vmin #a1a1a1;
+  box-shadow: 0.4vmin 0.4vmin 0.2vmin #a1a1a1;
 
   border-radius: 8vmin 2vmin 8vmin 2vmin;
 
@@ -75,7 +77,6 @@
   font-size: 5vmin !important;
 }
 
-.text{
-  font-family:Verdana, Geneva, Tahoma, sans-serif!important;
-
+.text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }

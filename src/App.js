@@ -32,11 +32,6 @@ function App() {
               </>
             }
           >
-            <Route path="1" element={<div>1</div>}></Route>
-            {/* <Route path="2" element={<div>2</div>}></Route>
-            <Route path="3" element={<div>3</div>}></Route>
-            <Route path="4" element={<div>4</div>}></Route> */}
-            {/* <Route path=":categoryName" element={<ListOfWidgets />}></Route> */}
             <Route path=":categoryName" element={<ListOfWidgets />}></Route>
           </Route>
         </Routes>

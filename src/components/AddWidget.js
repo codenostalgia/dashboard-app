@@ -16,10 +16,11 @@ function AddWidget() {
         trigger={<Button id="modal-btn">Show Modal</Button>}
         className="modal-popup"
         id="mymodal"
+        animation={false}
       >
         <div className="heading">Add a Widget </div>
 
-        <ModalContent>
+        <ModalContent animation={false}>
           <form className="ui form">
             <div className="field">
               <label>Name:</label>
@@ -37,7 +38,7 @@ function AddWidget() {
           </form>
         </ModalContent>
 
-        <ModalActions className="action">
+        <ModalActions className="action" animation={false}>
           <Button onClick={() => setOpen(false)} className="cancel-btn">
             Cancel
           </Button>

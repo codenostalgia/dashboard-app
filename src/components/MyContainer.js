@@ -36,8 +36,8 @@ const MyContainer = (props) => {
       </div>
       <div>
         {props.filteredCategories == null
-          ? props.categories.map((category) => {
-              return <Category category={category} />;
+          ? props.categories.map((category, ind) => {
+              return <Category category={category} key={ind} />;
             })
           : props.filteredCategories
               .filter((fcat) => {

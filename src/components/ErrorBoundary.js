@@ -5,18 +5,17 @@ class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        hasError: false,
+      hasError: false,
     };
   }
 
   static getDerivedStateFromError(error) {
-      return {
+    return {
       hasError: true,
     };
-    }
-    
-    componentDidCatch(error, info) {
-    }
+  }
+
+  componentDidCatch(error, info) {}
 
   render() {
     return this.state.hasError ? this.props.fallback : this.props.children;

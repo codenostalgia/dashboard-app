@@ -12,16 +12,28 @@
   flex-wrap:wrap;
 } */
 
-.category-title{
+.outer-div {
+  background-color: #f0f5fa;
+  border: 0.5vmin solid #f0f0f5;
+  border-radius: 2vmin !important;
+}
+
+.inner-div {
+  padding: 0.3vmin;
+  height: 100%;
+  width: 100%;
+}
+
+.category-title {
   color: black;
   font-size: 2vmin;
-  margin-left:2%;
+  margin-left: 2%;
   /* border: 2px solid red; */
 }
 
 .category-card {
   background-color: #f0f0f5 !important ;
-  border-radius: 20px !important;
+  border-radius: 2vmin !important;
 }
 
 .category-row {

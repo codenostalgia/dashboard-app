@@ -14,12 +14,6 @@ const store = createStore(
 
 const dispatch = store.dispatch;
 
-// check initial state
-console.log("INITIAL STATE: ", store.getState());
+// console.log("INITIAL STATE: ", store.getState());
 
-// listner to be called on each dispatch
-// store.subscribe(() => {
-//   console.log("updated State: ", store.getState());
-// });
-
-export { store,addData, filterData, dispatch };
+export { store, addData, filterData, dispatch };

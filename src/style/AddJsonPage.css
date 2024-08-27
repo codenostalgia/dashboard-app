@@ -1,5 +1,4 @@
 .file-container {
-  
   position: fixed;
   top: 15vh;
   left: 20vw;
@@ -11,7 +10,7 @@
 }
 
 .upload-json {
- font-size: 4vmin;
+  font-size: 4vmin;
   width: 100%;
 }
 
@@ -82,10 +81,9 @@ input[type="file"] {
   flex-direction: row;
   justify-content: center;
   align-content: center;
-
 }
 
-button.btn.btn-light.upload-btn{
-    font-size: 2vmin;
-    border: 0.3vmin solid #ccc;
+button.btn.btn-light.upload-btn {
+  font-size: 2vmin;
+  border: 0.3vmin solid #ccc;
 }

@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import { Button, NavLink } from "reactstrap";
 import "../style/Error.css";
 
-
 const Error = (props) => {
-
   return (
     <div className="error-page">
       <h1>SOME ERROR HAPPENED :/</h1>

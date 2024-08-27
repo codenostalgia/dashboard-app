@@ -8,27 +8,31 @@ import { connect } from "react-redux";
 
 const Category = (props) => {
   return (
-    <Card body className="category-card border-light">
-      <Row sm="12" className="category-row">
-        <div className="category-title">
-          <strong>{props.category.name}</strong>
-        </div>
-        {props.category.widgets.map((widget) => {
-          if (widget.active == true) {
-            return (
+    <div className="outer-div">
+      <div className="inner-div">
+        <Card body className="category-card border-light">
+          <Row sm="12" className="category-row">
+            <div className="category-title">
+              <strong>{props.category.name}</strong>
+            </div>
+            {props.category.widgets.map((widget, ind) => {
+              if (widget.active == true) {
+                return (
+                  <Col sm="4" className="wid" key={ind}>
+                    <Widget widget={widget} />
+                  </Col>
+                );
+              }
+            })}
+            {props.filteredCategories == null ? (
               <Col sm="4" className="wid">
-                <Widget widget={widget} />
+                <EmptyWidget categoryName={props.category.name} />
               </Col>
-            );
-          }
-        })}
-        {props.filteredCategories == null ? (
-          <Col sm="4" className="wid">
-            <EmptyWidget categoryName={props.category.name} />
-          </Col>
-        ) : null}
-      </Row>
-    </Card>
+            ) : null}
+          </Row>
+        </Card>
+      </div>
+    </div>
   );
 };
 

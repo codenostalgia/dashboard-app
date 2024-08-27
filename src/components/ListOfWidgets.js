@@ -2,7 +2,7 @@ import * as React from "react";
 import { useParams } from "react-router";
 import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
-import "../style/ListOfWidgets.css"
+import "../style/ListOfWidgets.css";
 
 const ListOfWidgets = (props) => {
   const { categoryName } = useParams();
@@ -15,8 +15,6 @@ const ListOfWidgets = (props) => {
       })
     : [];
 
-  console.log("category: ", category);
-
   return (
     <div id="select-active-widgets">
       {category.length ? (
@@ -24,7 +22,7 @@ const ListOfWidgets = (props) => {
           {category[0]["widgets"].map((widget, ind) => {
             let isChecked = widget.active;
             return (
-              <div className="form-check">
+              <div className="form-check" key={widget.name}>
                 <input
                   key={Math.random()}
                   className="form-check-input"
@@ -35,9 +33,9 @@ const ListOfWidgets = (props) => {
                 ></input>
                 <label
                   className="form-check-label"
-                  for={`${categoryName}-${widget.name}`}
+                  htmlFor={`${categoryName}-${widget.name}`}
                 >
-                  {widget.name} 
+                  {widget.name}
                 </label>
               </div>
             );

@@ -5,7 +5,7 @@ const initialCategoriesState = {
 };
 
 const categoriesReducer = (prevState = initialCategoriesState, action) => {
-  console.log("action received: ", action);
+  // console.log("action received: ", action);
   switch (action.type) {
     case ADD_DATA:
       return {
@@ -16,7 +16,5 @@ const categoriesReducer = (prevState = initialCategoriesState, action) => {
       return prevState;
   }
 };
-
-// console.log("milkshakeReducer: ", milkshakeReducer());
 
 export { categoriesReducer };

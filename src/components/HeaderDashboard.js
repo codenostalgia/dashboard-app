@@ -21,8 +21,6 @@ const HeaderDashboard = (props) => {
     let origionalCategories = props.categories;
 
     let filteredCategories = origionalCategories.map((cat) => {
-      console.log("cat: ", cat);
-
       let filteredWidgets = cat.widgets.filter((wid) => {
         return (
           wid.name.toLowerCase().includes(searchWidget.toLowerCase()) &&

@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import filterData from "../redux_config/filteredCategory/filterAction";
 
 const HeaderDashboard = (props) => {
-  const activeItem = "home";
 
   function searchChangeHandler(e) {
     let searchBar = document.getElementById("search-widget");

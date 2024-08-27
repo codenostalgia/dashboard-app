@@ -7,38 +7,34 @@ import { Outlet } from "react-router";
 import AddWidgetSidebar from "./AddWidgetSidebar";
 import { Col } from "reactstrap";
 import EmptyWidget from "./EmptyWidget";
-import {Card, Row} from "reactstrap";
+import { Card, Row } from "reactstrap";
 
 const MyContainer = (props) => {
-  // React.useEffect(() => {
-  //   console.log(props.categories);
-  // }, []);
-
-  if (props.filteredCategories) {
-    console.log(
-      "sum: ",
-      props.filteredCategories
-        .map((cat) => cat.widgets.length)
-        .reduce((total, x) => total + x)
-    );
-  }
 
   function addWidgetHandler(e) {
     const sidebar = document.getElementById("widget-sidebar");
     sidebar.style.display = "block";
+
+    const body = document.getElementsByTagName("body")[0];
+    body.style.overflowY = "hidden";
+
   }
 
   return (
     <div className="mycontainer">
-      <div>
-        <h1 className="dashboard-heading">CNAPP Dashboard 1</h1>
-        <button
-          type="button"
-          className="btn btn-light add-widget-button"
-          onClick={addWidgetHandler}
-        >
-          Add Widget +
-        </button>
+      <div className="container-header">
+        <div className="h">
+          <strong>CNAPP Dashboard</strong>
+        </div>
+        <div className="b">
+          <button
+            type="button"
+            className=" add-widget-button"
+            onClick={addWidgetHandler}
+          >
+            Add Widget +
+          </button>
+        </div>
       </div>
       <div>
         {props.filteredCategories == null

@@ -10,7 +10,9 @@ const Category = (props) => {
   return (
     <Card body className="category-card border-light">
       <Row sm="12" className="category-row">
-        <h4 className="category-title">{props.category.name}</h4>
+        <div className="category-title">
+          <strong>{props.category.name}</strong>
+        </div>
         {props.category.widgets.map((widget) => {
           if (widget.active == true) {
             return (
@@ -27,12 +29,6 @@ const Category = (props) => {
         ) : null}
       </Row>
     </Card>
-
-    // <div className="category">
-    // {state.mylist.map((item) => {
-    //   return <Widget cId={props.cId} wId={item} />;
-    // })}
-    // </div>
   );
 };
 

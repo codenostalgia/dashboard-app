@@ -13,6 +13,10 @@
 } */
 
 .category-title{
+  color: black;
+  font-size: 2vmin;
+  margin-left:2%;
+  /* border: 2px solid red; */
 }
 
 .category-card {

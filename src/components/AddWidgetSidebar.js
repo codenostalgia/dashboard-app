@@ -26,11 +26,17 @@ const AddWidgetSidebar = (props) => {
   function cancelHandler(e) {
     const sidebar = document.getElementById("widget-sidebar");
     sidebar.style.display = "none";
+
+    const body = document.getElementsByTagName("body")[0];
+    body.style.overflowY = "visible";
   }
 
   function confirmHandler(e) {
     const sidebar = document.getElementById("widget-sidebar");
     sidebar.style.display = "none";
+
+    const body = document.getElementsByTagName("body")[0];
+    body.style.overflowY = "visible";
 
     let checkbokContainer = document.getElementById("select-active-widgets");
     let inputElements = checkbokContainer.getElementsByTagName("input");
@@ -82,45 +88,62 @@ const AddWidgetSidebar = (props) => {
   }
 
   return (
-    <div body className="widget-sidebar" id="widget-sidebar">
-      <div className="sidebar-header">
-        <h3 className="title">Add Widget</h3>
-        <button type="button" className="cross-button" onClick={cancelHandler}>
-          X
-        </button>
-      </div>
-      <div className="subtitle">
-        Personalise your dashboard by adding the following widget
-      </div>
+    <div id="widget-sidebar">
+      <div className="widget-block-region"></div>
+      <div className="widget-sidebar">
+        <div className="sidebar-header">
+          <div className="title">Add Widget</div>
+          <div className="cancel-div">
+            <button
+              type="button"
+              className="cross-button"
+              onClick={cancelHandler}
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <div className="subtitle">
+          Personalise your dashboard by adding the following widget
+        </div>
 
-      <div className="sidebar-content">
-        <nav className="navbar navbar-expand-lg navbar-light ">
-          <ul className="navbar-nav" id="navbar-nav">
-            {props.categories.map((cat) => {
-              return (
-                <NavLink className="nav-link" to={cat.name} id={cat.name}>
-                  {cat.name}
-                </NavLink>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
+        <div className="sidebar-content">
+          <nav className="navbar navbar-expand-lg navbar-light ">
+            <ul className="navbar-nav" id="navbar-nav">
+              {props.categories.map((cat) => {
+                return (
+                  <NavLink className="nav-link" to={cat.name} id={cat.name}>
+                    {cat.name}
+                  </NavLink>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
 
-      <div className="category-widgets">
-        {props.outlet ? props.outlet : null}
-      </div>
-      <div className="sidebar-footer">
-        <button
-          type="button"
-          className="confirm-button"
-          onClick={confirmHandler}
-        >
-          Confirm
-        </button>
-        <button type="button" className="cancel-button" onClick={cancelHandler}>
-          Cancel
-        </button>
+        <div className="category-widgets">
+          {props.outlet ? props.outlet : null}
+        </div>
+        <div className="sidebar-footer">
+          <div className="confirm-div">
+            <button
+              type="button"
+              className="confirm-button"
+              onClick={confirmHandler}
+            >
+              Confirm
+            </button>
+          </div>
+          <div className="cancel-div">
+            <button
+              type="button"
+              className="cancel-button"
+              onClick={cancelHandler}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

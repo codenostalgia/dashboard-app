@@ -35,3 +35,11 @@
   color: #14147d !important;
   border: 2px solid #14147d !important;
 }
+
+.heading{
+    font-size: 5vmin !important;
+}
+
+.field{
+  font-size: 2vmin;
+}

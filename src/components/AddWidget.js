@@ -22,7 +22,7 @@ function AddWidget() {
         className="modal-popup"
         id="mymodal"
       >
-        <ModalHeader>Add a Widget</ModalHeader>
+        <div className="heading">Add a Widget</div>
 
         <ModalContent>
           <form className="ui form">

@@ -8,10 +8,12 @@ html body {
   height: 100%;
   width: 100%;
   font-size: 100%;
+
 }
 
 body{
   background-color: #F0F5FA !important;
+  font-size: 2vmin;
 }
 
 #root {

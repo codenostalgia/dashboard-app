@@ -2,7 +2,7 @@
   aspect-ratio: 2/1;
   width: 100%;
   background-color: #ffffff !important ;
-  border-radius: 20px;
+  border-radius: 2vmin;
   /* height:100%; */
   padding: 10px;
   margin: 1%;
@@ -10,18 +10,37 @@
   display: flex;
   flex-direction: column;
 }
-
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+}
 .left {
+  font-size: 2vmin;
+  /* border: 2px solid red; */
+
   float: left;
+
+  display: flex;
+  align-items: center;
 }
 
 .right {
-  float: right;
-    margin: 1%;
+  /* border: 2px solid blue; */
+
+  float: right !important;
+  font-size: 2vmin;
+
+  display: flex;
+  align-items: flex-start;
 }
+
 .erase-widget {
   background-color: white;
-  color: rgba(0, 0, 0, 0.4)  ;
+  color: rgba(0, 0, 0, 0.4);
   border: none;
+}
 
+.widget-body {
+  font-size: 2vmin;
+  margin-top: 2% !important;
 }

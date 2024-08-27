@@ -22,9 +22,9 @@ const Widget = (props) => {
 
   return (
     <div className="widget">
-      <div>
-        <div className="left">
-          <h3 className="widget-title">{props.widget.name}</h3>
+      <div className="widget-header">
+        <div className="left widget-title">
+          <strong>{props.widget.name}</strong>
         </div>
         <div className="right">
           <button className="erase-widget" onClick={eraseHandler}>

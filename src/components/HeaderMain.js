@@ -13,14 +13,10 @@ const HeaderMain = (props) => {
     let searchBar = document.getElementById("search-widget");
     let searchWidget = searchBar.value;
 
-    if (searchWidget == '') {
-      console.log("its empty");
-      
-      props.filterCategories(null)
+    if (searchWidget == "") {
+      props.filterCategories(null);
       return;
     }
-
-    console.log("origional data before: ", props.categories);
 
     let origionalCategories = props.categories;
 
@@ -28,11 +24,6 @@ const HeaderMain = (props) => {
       console.log("cat: ", cat);
 
       let filteredWidgets = cat.widgets.filter((wid) => {
-        console.log(
-          wid.name.toLowerCase().includes(searchWidget.toLowerCase()) &&
-            wid.active
-        );
-
         return (
           wid.name.toLowerCase().includes(searchWidget.toLowerCase()) &&
           wid.active
@@ -43,37 +34,25 @@ const HeaderMain = (props) => {
         name: cat.name,
         widgets: filteredWidgets,
       };
-
       return updatedCat;
     });
-
-    console.log("origional data after: ", props.categories);
-    console.log("filteredCategories : ", filteredCategories);
-
     props.filterCategories(filteredCategories);
   }
 
   return (
     <div className="myheader">
       <div className="path">
-        <h6 className="main-heading">Home &gt; Dashboard</h6>
+       Home &gt; Dashboard
       </div>
       <div className="features">
         <input
-          className=" mr-sm-2 searchbar"
+          className="form-control form-input searchbar"
           type="search"
           placeholder="Search Widget..."
           aria-label="Search"
           id="search-widget"
           onChange={searchChangeHandler}
         ></input>
-        {/* <button
-          type="button"
-          className="btn btn-light search-button"
-          onClick={searchHandler}
-        >
-          Search
-        </button> */}
       </div>
     </div>
   );

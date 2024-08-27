@@ -1,27 +1,54 @@
 .mycontainer {
-  height: 92%;
+  height: 94vh;
   width: 94%;
   margin-left: 3%;
   margin-right: 3%;
-
-  /* overflow-y: auto;
-  scrollbar-width: none; */
+  margin-top: 8vh;
 
   display: flex;
   flex-direction: column;
 }
 
-.dashboard-heading{
-  display: inline;
-  float: left;
+.container-header {
+  height: 6%;
+  margin: 1% 0 2% 0;
+  display: flex;
+  gap: 50%;
+}
+
+.h {
+  width: 30%;
+  height: 100%;
+  align-content: center;
+  font-size: 2vmin;
+  /* border: 2px solid red; */
+}
+
+.b {
+  aspect-ratio: 3/1;
+  height: 100%;
+  align-content: center;
+  font-size: 2vmin;
+  /* border: 2px solid red; */
 }
 
 .add-widget-button {
-  display: inline;
-float: right;
+  background-color: white;
+  border: 2px solid black !important;
+  color: black !important;
+  border-top-left-radius: 0.5vmin;
+  border-top-right-radius: 0.5vmin;
+  border-bottom-left-radius: 0.5vmin;
+  border-bottom-right-radius: 0.5vmin;
+
+  height: 100%;
+  width: 100%;
+  padding: 2%;
+
+  font-size: 2vmin;
 }
 
-.no-result{
+.no-result {
   height: 30vh !important;
   width: 100vw !important;
   color: red !important;

@@ -7,7 +7,7 @@ Use this JSON file to upload on Dashboard App - https://github.com/codenostalgia
 --------------------------------------------------------------------------------------
 
 This App is built using-
-FrontEnd: React JS
+FrontEnd: React JS, 
 State Management: Redux
 
 --------------------------------------------------------------------------------------

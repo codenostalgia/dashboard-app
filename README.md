@@ -18,6 +18,7 @@ For Locally Running this project-
 3) you can access app locally at http://localhost:3000/
 4) Once the app runs, you can use the "test-data.json" present in "dashboard-frontend" folder, to upload on home page of dashboard app.
 5) If you make any changes to JSON file, then please consider formatting the json file using some online tool (ex-https://jsonformatter.curiousconcept.com/), before uploading it on the Dashboard app.
+6) As we are not using Backend, and just relying on state managemenet tool, the state will be restored to InitialState, so please dont refresh page manually, as it will vanish uploaded data.
 
 
 PS-

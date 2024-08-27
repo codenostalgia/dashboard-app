@@ -10,20 +10,45 @@ import { ToastContainer, toast } from "react-toastify";
 const AddJsonPage = (props) => {
   const navigate = useNavigate();
 
+  function displayError(msg) {
+    let errorDiv = document.getElementById("error-div");
+    errorDiv.innerText = msg;
+    errorDiv.style.display = "block";
+
+    setTimeout(() => {
+      errorDiv.innerText = "";
+      errorDiv.style.display = "none";
+    }, 2000);
+  }
+
   function buttonHandler(e) {
     e.preventDefault();
     const fileInput = document.getElementById("json-input-file");
     let filereader = new FileReader();
 
-    filereader.onload = (event) => {
-      let data = JSON.parse(event.target.result);
-      while (data == undefined) {}
-      props.addJsonData(data);
-      while (props.categories == undefined) {}
-      navigate("dashboard");
-    };
+    try {
+      filereader.onload = (event) => {
+        let result = event.target.result;
+        let data;
+        try {
+          console.log(result);
+          data = JSON.parse(result);
+        } catch {
+          console.log("JSON PARSING ERROR..");
+          displayError("JSON PARSING ERROR..");
+        }
 
-    filereader.readAsText(fileInput.files[0]);
+        while (data == undefined) {}
+        props.addJsonData(data);
+        while (props.categories == undefined) {}
+        navigate("dashboard");
+      };
+
+      filereader.readAsText(fileInput.files[0]);
+    } catch (e) {
+      console.log("PLEASE SELECT FILE..");
+      displayError("PLEASE SELECT A JSON FILE....");
+    }
   }
 
   function inputFileChangeHandler(e) {
@@ -34,7 +59,9 @@ const AddJsonPage = (props) => {
 
   return (
     <div className="file-container">
+      <div className="error-div" id="error-div"></div>
       <div className="upload-json">UPLOAD JSON FILE:</div>
+      <div className="upload-note">[Format your JSON File before uploading]</div>
       <Divider />
 
       <div className="main">

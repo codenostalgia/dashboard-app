@@ -88,7 +88,7 @@ const AddWidgetSidebar = (props) => {
   return (
     <div id="widget-sidebar">
       <div className="widget-block-region" id="widget-block-region"></div>
-      <div className="widget-sidebar">
+      <div className="widget-sidebar-main-region">
         <div className="sidebar-header">
           <div className="title">Add Widget</div>
           <div className="cancel-div">

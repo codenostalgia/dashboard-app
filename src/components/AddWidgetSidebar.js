@@ -1,9 +1,6 @@
 import * as React from "react";
 import "../style/AddWidgetSidebar.css";
-import { Card, Col } from "reactstrap";
-import { NavLink, Route, Routes } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
 

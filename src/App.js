@@ -2,14 +2,11 @@ import "./App.css";
 import AddJsonPage from "./components/AddJsonPage";
 import HeaderHome from "./components/HeaderHome";
 import MyContainer from "./components/MyContainer";
-import Category from "./components/Category";
 import HeaderDashboard from "./components/HeaderDashboard";
-import AddWidgetSidebar from "./components/AddWidgetSidebar";
 import { Provider } from "react-redux";
 import { store } from "./redux_config/store";
 import { Route, Routes } from "react-router-dom";
 import ListOfWidgets from "./components/ListOfWidgets";
-import AddWidget from "./components/AddWidget";
 
 function App() {
   return (

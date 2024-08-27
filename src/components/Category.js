@@ -1,9 +1,9 @@
 import * as React from "react";
 import "../style/Category.css";
 import Widget from "./Widget";
-import { Row, Col, Card, CardTitle, CardText, Button } from "reactstrap";
+import { Row, Col, Card } from "reactstrap";
 import EmptyWidget from "./EmptyWidget";
-import { addData, filterData } from "../redux_config/store";
+import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
 
 const Category = (props) => {
@@ -16,7 +16,7 @@ const Category = (props) => {
               <strong>{props.category.name}</strong>
             </div>
             {props.category.widgets.map((widget, ind) => {
-              if (widget.active == true) {
+              if (widget.active === true) {
                 return (
                   <Col sm="4" className="wid" key={ind}>
                     <Widget widget={widget} />

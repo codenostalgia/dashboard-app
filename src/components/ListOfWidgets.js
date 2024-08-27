@@ -20,7 +20,6 @@ const ListOfWidgets = (props) => {
       {category.length ? (
         <>
           {category[0]["widgets"].map((widget, ind) => {
-            let isChecked = widget.active;
             return (
               <div className="form-check" key={widget.name}>
                 <input

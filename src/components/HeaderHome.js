@@ -1,6 +1,5 @@
 import * as React from "react";
 import "../style/HeaderHome.css";
-import { MenuItem, Menu, Segment } from "semantic-ui-react";
 
 const HeaderHome = (props) => {
   const activeItem = "home";

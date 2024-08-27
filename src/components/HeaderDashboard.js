@@ -1,7 +1,5 @@
 import * as React from "react";
 import "../style/HeaderDashboard.css";
-import { MenuItem, Menu, Segment } from "semantic-ui-react";
-import { Button } from "reactstrap";
 import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
 import filterData from "../redux_config/filteredCategory/filterAction";
@@ -13,7 +11,7 @@ const HeaderDashboard = (props) => {
     let searchBar = document.getElementById("search-widget");
     let searchWidget = searchBar.value;
 
-    if (searchWidget == "") {
+    if (searchWidget === "") {
       props.filterCategories(null);
       return;
     }

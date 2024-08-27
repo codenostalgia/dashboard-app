@@ -1,18 +1,10 @@
 import * as React from "react";
 import "../style/EmptyWidget.css";
 
-import {
-  ModalHeader,
-  ModalDescription,
-  ModalContent,
-  ModalActions,
-  Button,
-  Header,
-  Image,
-  Modal,
-} from "semantic-ui-react";
+import { Modal } from "semantic-ui-react";
 import { addData } from "../redux_config/store";
 import { connect } from "react-redux";
+import { Button } from "reactstrap";
 
 import "../style/AddWidget.css";
 

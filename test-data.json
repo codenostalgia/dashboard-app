@@ -1,0 +1,76 @@
+[
+	{
+		"name": "Ticket",
+		"widgets": []
+	},
+	{
+		"name": "CSPM",
+		"widgets": [
+			{
+				"name": "Cloud Accounts",
+				"data": "Cloud Account means a unique Portal account assigned to a Cloud User, which is necessary for use of the Cloud Products, and used for purposes of management and billing associated with one or more Cloud Products.",
+				"active": true
+			},
+			{
+				"name": "Cloud Accounts Risk Management",
+				"data": "Cloud Risk Management is the process of assessing, securing, and managing all kinds of risks related to Cloud computing. It includes assessment across your organization’s cloud footprint.",
+				"active": false
+			},
+			{
+				"name": "Cloud Accounts Latency",
+				"data": "Cloud latency refers to the time it takes for data to travel between a user's device and the cloud server. ",
+				"active": true
+			},
+			{
+				"name": "Cloud Premium Accounts",
+				"data": "The Clouds PREMIUM theme is based on artistic images and is free to download and install on your computer.",
+				"active": true
+			}
+		]
+	},
+	{
+		"name": "CWPP",
+		"widgets": [
+			{
+				"name": "Top 5 Namespace Specific Alerts",
+				"data": "Alerting rules contain a set of conditions that outline a particular state within a cluster. ",
+				"active": true
+			},
+			{
+				"name": "Workload Alerts",
+				"data": "With workloads you get a single, global value that summarizes the status of all the entities in your workload.",
+				"active": true
+			},
+			{
+				"name": "Failure Alert",
+				"data": "Failure detection is the process of inspecting logs and identifying all strings and patterns that indicate whether an error occurred in an application. .",
+				"active": true
+			}
+		]
+	},
+	{
+		"name": "image",
+		"widgets": [
+			{
+				"name": "Image 1",
+				"data": "An image is a visual representation. An image can be two-dimensional, such as a drawing, painting, or photograph, or three-dimensional, such as a carving or sculpture",
+				"active": false
+			},
+			{
+				"name": "Image 2",
+				"data": "An image is a visual representation. An image can be two-dimensional, such as a drawing, painting, or photograph, or three-dimensional, such as a carving or sculpture",
+				"active": true
+			}
+		]
+	},
+	{
+		"name": "Graphs",
+		"widgets": [
+			{
+				"name": "Density Graph",
+				"data": "In mathematics, a dense graph is a graph in which the number of edges is close to the maximal number of edges (where every pair of vertices is connected by one edge).",
+				"active": false
+			}
+		]
+	}
+]

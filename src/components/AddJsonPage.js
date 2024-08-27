@@ -1,11 +1,9 @@
 import * as React from "react";
-import { Container, Header, Divider } from "semantic-ui-react";
+import { Divider } from "semantic-ui-react";
 import "../style/AddJsonPage.css";
 import addData from "../redux_config/category/categoryAction";
 import { connect } from "react-redux";
-import { dispatch } from "../redux_config/store";
 import { useNavigate } from "react-router";
-import { ToastContainer, toast } from "react-toastify";
 
 const AddJsonPage = (props) => {
   const navigate = useNavigate();
@@ -31,16 +29,15 @@ const AddJsonPage = (props) => {
         let result = event.target.result;
         let data;
         try {
-          console.log(result);
           data = JSON.parse(result);
         } catch {
           console.log("JSON PARSING ERROR..");
           displayError("JSON PARSING ERROR..");
         }
 
-        while (data == undefined) {}
+        while (data === undefined) {}
         props.addJsonData(data);
-        while (props.categories == undefined) {}
+        while (props.categories === undefined) {}
         navigate("dashboard");
       };
 

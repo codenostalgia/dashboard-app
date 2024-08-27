@@ -1,7 +1,4 @@
 import * as React from "react";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
-import { Button, NavLink } from "reactstrap";
 import "../style/Error.css";
 
 const Error = (props) => {

@@ -5,9 +5,6 @@ import { connect } from "react-redux";
 import { addData } from "../redux_config/store";
 import { Outlet } from "react-router";
 import AddWidgetSidebar from "./AddWidgetSidebar";
-import { Col } from "reactstrap";
-import EmptyWidget from "./EmptyWidget";
-import { Card, Row } from "reactstrap";
 
 const MyContainer = (props) => {
   function addWidgetHandler(e) {

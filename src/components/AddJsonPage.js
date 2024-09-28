@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Divider } from "semantic-ui-react";
-import "../style/AddJsonPage.css";
-import addData from "../redux_config/category/categoryAction";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router";
+import { Divider } from "semantic-ui-react";
+import addData from "../redux_config/category/categoryAction";
+import "../style/AddJsonPage.css";
 
 const AddJsonPage = (props) => {
   const navigate = useNavigate();
@@ -58,7 +58,13 @@ const AddJsonPage = (props) => {
     <div className="file-container">
       <div className="error-div" id="error-div"></div>
       <div className="upload-json">UPLOAD JSON FILE:</div>
-      <div className="upload-note">[Format your JSON File before uploading]</div>
+      <div className="upload-note">
+        [Download Test JSON File from Here -{" "}
+        <a href="https://github.com/codenostalgia/dashboard-app/blob/main/test-data.json">
+          Click Here
+        </a>
+        ]
+      </div>
       <Divider />
 
       <div className="main">

@@ -1,8 +1,8 @@
 This Dashboard-App repository is developed for the purpose of "Accuknox" recruitment assignment submission.
 
-The app is deployed live here- https://66cdc8bcf30f6f000812e072--tiny-heliotrope-59c9ae.netlify.app/
+The app is deployed live here- 
 
-Use this JSON file to upload on Dashboard App - https://github.com/codenostalgia/dashboard-app/blob/main/test-data.json
+Use this JSON file to upload on Dashboard App - https://tiny-heliotrope-59c9ae.netlify.app/
 
 --------------------------------------------------------------------------------------
 
